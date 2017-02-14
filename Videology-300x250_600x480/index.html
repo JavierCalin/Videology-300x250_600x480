@@ -6,6 +6,7 @@
  		<title>Careta Workspaces</title>
         <link rel="stylesheet" href="style.css"/>
         <script type="text/javascript" src="adConfig.js"></script>
+        <script type="text/javascript">EBModulesToLoad = ['Video'];</script>
         <script type="text/javascript" src="js/EBLoader.js"></script>
         
         <script>
@@ -32,7 +33,7 @@
 			}
 
 			function onMouseOverConfig(event){
-				expandBtn.addEventListener("mouseleave",isReallyOutBanner);
+				banner.addEventListener("mouseleave",isReallyOutBanner);
 				if(delayTimeout === null){
 					delayTimeout = setTimeout(function(){
 						EB.expand({panelName: "userPanel",
@@ -58,7 +59,12 @@
 	<body>
         <div id="banner">
         	<button id="expandBtn"></button>
-            <img src="images/backup.jpg" alt="bgImage" />
+             <div id="videoDiv">
+			    <video id="video1" width="300" height="240" controls="controls" autoplay="autoplay">
+			      <source src="panels/videos/video.mp4" type="video/mp4" />
+			      Your browser does not support the video tag.
+			    </video>
+			</div>
         </div>
 	</body>
 </html>

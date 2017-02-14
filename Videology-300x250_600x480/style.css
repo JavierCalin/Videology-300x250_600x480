@@ -6,6 +6,7 @@ body,button {
 #banner{
   position:absolute;
   display: block;
+  background-color: #000000;
 }
 
 #expandBtn{
